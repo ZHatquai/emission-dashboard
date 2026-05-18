@@ -1,0 +1,68 @@
+/* The Corporate — Brand CSS Custom Properties */
+
+:root {
+  /* Color palette */
+  --ink: #000000;
+  --stone: #B6B09F;
+  --linen: #EAE4D5;
+  --chalk: #F2F2F2;
+  --white: #FFFFFF;
+  --acid-lime: #C8F135;
+  --danger: #C0392B;
+  --success: #2E7D32;
+  --warning: #E67E22;
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --fw-display: 700;
+  --fw-body: 300;
+  --fw-emphasis: 500;
+
+  /* Layout */
+  --sidebar-width: 220px;
+  --topbar-height: 56px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--fw-body);
+  background: var(--chalk);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-display);
+  margin: 0;
+}
+
+button {
+  border-radius: 0 !important;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+/* Hairline borders */
+.border-hairline {
+  border: 0.5px solid var(--stone);
+}
+
+/* Acid Lime usage (max 2 per page, always on Ink background) */
+.lime-on-ink {
+  background: var(--ink);
+  color: var(--acid-lime);
+}
+
+/* Status colours — text only, never fills */
+.text-danger { color: var(--danger); }
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
