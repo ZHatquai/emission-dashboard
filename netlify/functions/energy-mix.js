@@ -1,7 +1,10 @@
-const path = require('path')
-const XLSX = require('xlsx')
+import path from 'path'
+import { fileURLToPath } from 'url'
+import XLSX from 'xlsx'
 
-exports.handler = async () => {
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+export const handler = async () => {
   try {
     const filePath = path.join(__dirname, '../../data/TheCorporate_Emissions_Energy_2023-ver3.xlsx')
     const workbook = XLSX.readFile(filePath)
